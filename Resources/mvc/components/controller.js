@@ -37,6 +37,14 @@ var Controller = function(){
 	}
 	
 	/**
+	 * Set Layout string
+	 * @param {String} set layout name string
+	 */
+	this.setLayout = function(l){
+		self.layout = l;
+	}
+	
+	/**
 	 * Render View Class with Layout Class
 	 * @param {View} activeView active view class
 	 * @private
