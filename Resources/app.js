@@ -20,7 +20,7 @@ var CONFIG = {
 	 * Path to resources directory
 	 * @type String
 	 */
-	resDir: Titanium.Filesystem.resourcesDirectory,
+	resDir: Titanium.Filesystem.getResourcesDirectory(),
 	/**
 	 * Base path to MVC 
 	 * @type string

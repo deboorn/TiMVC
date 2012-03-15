@@ -1,1 +1,11 @@
 Place your change log text here.  This file will be incorporated with your app at package time.
+
+Version 1.2.1.1.1 (1.2 beta 1.1) -- release
+Version 1.2.1.2.1 (1.2 beta 2.1) -- bug fix
+ -- project package moved to GitHub
+ -- Bug fix updates to /core/timvc.js
+    1. Update util.dP function to return default px value for iPhone
+    2. Update window open url to remove resource directory base path (no longer needed)
+ -- Bug fix update to /components/controller.js
+    1. Added setter function setLayout to allow layout change on the fly
+ -- tested on 1.8.2.x (V8 engine) with success on Android and iPhone 

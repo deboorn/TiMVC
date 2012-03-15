@@ -123,6 +123,7 @@ var TiMVC = function(config){
 	 * @returns an adjusted pixel value based on supplied density pixels and a medium dpi of 160
 	 */
 	this.util.dP = function (densityPixels) {
+		if(self.iPhone) return densityPixels;
 		//medium dpi is 160, this will scale to medium
         var px = densityPixels*Ti.Platform.displayCaps.dpi/160;
         return px;
@@ -194,7 +195,7 @@ var TiMVC = function(config){
 	 */
 	this.util.createWindow = function(title,route,data){
 		var win = Titanium.UI.createWindow({
-			"title":title,url:self.config.resDir + 'app.js',"route":route,request:JSON.stringify(data)
+			"title":title,url:'app.js',"route":route,request:JSON.stringify(data)
 		});
 		win.orientationModes = [Titanium.UI.PORTRAIT, Titanium.UI.UPSIDE_PORTRAIT];
 		return win;
@@ -242,7 +243,7 @@ var TiMVC = function(config){
 	 */
 	this.loadRoute = function(title,route,data){
 		var window = Titanium.UI.createWindow({
-			"title":title,url:self.config.resDir + 'app.js',"route":route,request:JSON.stringify(data),backgroundColor:'#000',navBarHidden:false
+			"title":title,url:'app.js',"route":route,request:JSON.stringify(data),backgroundColor:'#000',navBarHidden:false
 		});
 		self.openWindow(window);
 	}
@@ -291,7 +292,7 @@ var TiMVC = function(config){
 	 */
 	this.openRootWindow = function(){
 		self.window = Titanium.UI.createWindow({
-			title:self.config.appName,navBarHidden:true,exitOnClose:true,url:self.config.resDir + 'app.js',route:'main/home',request:"{}",backgroundColor:'#000'
+			title:self.config.appName,navBarHidden:true,exitOnClose:true,url:'app.js',route:'main/home',request:"{}",backgroundColor:'#000'
 		});
 		self.window.orientationModes = [Titanium.UI.PORTRAIT, Titanium.UI.UPSIDE_PORTRAIT];
 		if(self.iPhone){
@@ -531,6 +532,7 @@ var TiMVC = function(config){
 		self.invokeDatabase();
 		self.detectPlatform();
 		var r = self.setCurrentWindow();
+		
 		if(!r){
 			self.openRootWindow();
 		}else{
