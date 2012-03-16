@@ -1,8 +1,8 @@
-#appname:TiMVC Framework Demo
+#appname:TiMVC Framework 
 #publisher:Daniel Boorn
 #url:http://multimarketapplications.com
 #image:appicon.png
-#appid:timvc.framework.demo
-#desc:TiMVC Framework Demo
+#appid:com.timvc.framework
+#desc:TiMVC is a small MVC for Titanium mobile. Want a single JSS file, action routing, json data passing, inheritance, layout separation and code organization? If so you should try TiMVC. Includes sample application & multi-dashboard view.
 #type:mobile
 #guid:03b38b21-06d4-41c8-9e8a-29ba16592f21
