@@ -60,7 +60,11 @@ var createScrollableGridView = function(data,settings,clickHandler){
 	 */
 	this.createGrid = function(rows,settings){
 		
-		var pages = Titanium.UI.createScrollableView({showPagingControl:true});
+		var pages = Titanium.UI.createScrollableView({							  
+							  //dont display paging under 3 rows or 9 items
+							  //change for your need
+			showPagingControl: (rows.length > 3) ? true : false
+		});
 		var maxPerPage = self.getMaxRowsPerPage(settings.height,settings.padding);
 		var pageRowList = [];
 		var list = [];

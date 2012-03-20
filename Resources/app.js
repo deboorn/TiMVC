@@ -15,7 +15,7 @@ var CONFIG = {
 	 * Main application name to be displayed in main application window title (if needed)
 	 * @type String
 	 */
-	appName: "TiMVC Framework Demo",//main appliation window title
+	appName: "TiMVC Framework",//main appliation window title
 	/**
 	 * Path to resources directory
 	 * @type String
