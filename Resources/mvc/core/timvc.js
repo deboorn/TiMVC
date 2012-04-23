@@ -134,8 +134,9 @@ var TiMVC = function(config){
      * @param {String} url
      * @param {Object} data
      * $param {Function} onload function to be called for a good load event
+     * @param {String} method HTTP method either GET/POST
      */
-    this.util.getJSON = function(url,data,onload){
+    this.util.getJSON = function(url,data,onload,method){
     	
     	//debug
     	self.sysDebug('timvc: attempting to fetch data via ajax.')
@@ -156,7 +157,7 @@ var TiMVC = function(config){
     	xhr.onerror = function(){
     		self.notice('Failed to connect to internet. Are you connect to a network?');
     	}
-    	xhr.open('GET',url);
+    	xhr.open(method,url);
     	xhr.send(data);
     }
     
