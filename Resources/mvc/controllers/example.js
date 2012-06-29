@@ -26,7 +26,7 @@ var Example = function(){
 	 */
 	
 	/**
-	 * tabgroup action -- loads a tab group ui with the default layout and /mvc/views/example/tabgroup.js view file
+	 * tabgroup action -- loads a tab group ui with the default layout 
 	 * @param {Object} r json request object sent by routing window
 	 */
 	this.tabgroup = function(r){
