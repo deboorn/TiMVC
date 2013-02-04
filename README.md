@@ -1,6 +1,14 @@
 Appcelerator Titanium Mobile MVC
 ============================================================
 
+USE OF THIS PACKAGE IS NO LONGER RECOMMENDED. PLEASE USE TITANIUM ALLOY FRAMEWORK INSTEAD. THIS REPO IS SCHEDULED FOR DELETION. 
+
+
+
+
+
+
+
 TiMVC is a small MVC for Titanium mobile. Want a single JSS file, action routing, json data passing, inheritance, layout separation and code organization? If so you should try TiMVC. Includes sample application & multi-dashboard view.
 
 Features and Benefits
